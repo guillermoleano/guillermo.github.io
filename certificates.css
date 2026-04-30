@@ -1,0 +1,143 @@
+ /* =========================================================
+   🟣 CERTIFICATES (SYSTEM INTEGRATION - SENIOR UX/UI)
+========================================================= */
+
+#certificates {
+    display: flex; /* main vertical layout */
+    flex-direction: column; /* title + content */
+    gap: 1.5rem; /* consistent spacing with system */
+
+    /* IMPORTANT: matches your container cards */
+    padding: 2rem; /* internal breathing space */
+
+    border-radius: 16px; /* modern rounded corners */
+
+    border: 1px solid var(--border); /* subtle structure definition */
+
+
+    backdrop-filter: blur(18px); 
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: all 0.25s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================
+    TITLE (SYSTEM TYPOGRAPHY)
+========================= */
+
+#certificates h2 {
+    font-family: "Rokkitt", serif;
+    font-size: 1.3rem;
+    padding-top: 14px;
+
+    letter-spacing: -0.02em;
+
+    margin: 0;
+}
+
+/* =========================
+   CERTIFICATE CARD (FLEX ROW)
+========================= */
+
+.certificate-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    padding: 1rem;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid var(--border);
+
+    transition: all 0.25s ease;
+
+    position: relative;
+}
+
+/* hover uses YOUR system tokens */
+.certificate-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   IMAGE (CLEAN UX, NO DISTORTION)
+========================= */
+
+.certificate-img {
+    width: 80px;
+    height: 80px;
+
+    flex-shrink: 0; /* prevents layout breaking */
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   TEXT BLOCK (HIERARCHY SYSTEM)
+========================= */
+
+.certificate-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.certificate-info h3 {
+    font-size: 1rem;
+
+    color: var(--text-primary);
+
+    margin: 0;
+}
+
+.certificate-info p {
+    font-size: 0.9rem;
+
+    color: var(--text-secondary);
+
+    margin: 0;
+}
+
+/* =========================
+   OPTIONAL MICRO INTERACTION (GLOW)
+========================= */
+
+.certificate-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        circle at 20% 20%,
+        var(--glow-mint),
+        transparent 60%
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    pointer-events: none;
+}
+
+.certificate-card:hover::after {
+    opacity: 0.25;
+}

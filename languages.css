@@ -1,0 +1,96 @@
+/* =========================================================
+   🟣 LANGUAGES (GLOBAL SYSTEM EXTENSION)
+   -> Consistency with Tools + Programming
+========================================================= */
+
+/* SECTION STRUCTURE ONLY */
+#languages {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem; /* spacing between title and content */
+}
+
+/* =========================
+   TITLE
+========================= */
+
+#languages h2 {
+
+    font-family: "Rokkitt", serif;
+
+    font-size: 1.4rem; /* consistent with other sections */
+
+    color: var(--text-primary);
+
+    letter-spacing: -0.02em;
+
+    margin: 0 0 0.5rem 0;
+}
+
+/* =========================
+   LIST SYSTEM (CHIPS LAYOUT)
+========================= */
+
+.languages {
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+}
+
+/* =========================
+   LIST ITEM RESET
+========================= */
+
+.languages li {
+    margin: 0;
+}
+
+/* =========================
+   BUTTONS (GLOBAL FIRST RULE)
+   -> DO NOT override base design system
+========================= */
+
+.languages button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.85rem; /* subtle hierarchy tweak */
+}
+
+/* =========================
+   HOVER (MICRO INTERACTION ONLY)
+========================= */
+
+.languages button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-sm);
+
+    border-color: var(--accent-primary); /* slight semantic variation */
+}
+
+/* =========================
+   ACTIVE STATE
+========================= */
+
+.languages button:active {
+
+    transform: translateY(0px);
+
+    background: var(--hover-overlay);
+}

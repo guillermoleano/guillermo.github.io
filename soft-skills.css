@@ -1,0 +1,116 @@
+ /* =========================================================
+   🟣 SOFT SKILLS SECTION (UX/UI SENIOR POLISH)
+========================================================= */
+
+#soft-skills {
+    display: flex; /* vertical layout structure */
+    flex-direction: column; /* title + list stack */
+    gap: 1rem; /* spacing between elements */
+
+    padding: 2rem; /* internal spacing */
+
+    /* glassmorphism surface aligned with system */
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow: var(--shadow-sm);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.25s ease;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+#soft-skills h2 {
+    font-family: "Rokkitt", serif;
+    font-size: 1.4rem;
+
+
+    letter-spacing: -0.02em;
+
+    margin: 0;
+}
+
+/* =========================
+   LIST RESET
+========================= */
+
+.soft-skills {
+    list-style: none; /* remove bullets */
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column; /* clean vertical rhythm */
+    gap: 0.75rem; /* spacing between items */
+}
+
+/* =========================
+   LIST ITEMS (UX IMPROVED READABILITY)
+========================= */
+
+.soft-skills li {
+    position: relative;
+
+    padding-left: 1.2rem; /* space for accent dot */
+
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    transition: all 0.25s ease;
+}
+
+/* =========================
+   ACCENT DOT (MICRO DETAIL UX)
+========================= */
+
+.soft-skills li::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0.55rem;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--accent-secondary);
+
+    opacity: 0.8;
+}
+
+/* =========================
+   HOVER INTERACTION (SUBTLE BUT PREMIUM)
+========================= */
+
+.soft-skills li:hover {
+    color: var(--text-primary); /* readability boost */
+    transform: translateX(4px); /* micro interaction */
+}
+
+/* highlight dot on hover */
+.soft-skills li:hover::before {
+    background: var(--accent-primary);
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+/* =========================
+   OPTIONAL SECTION HOVER DEPTH
+========================= */
+
+#soft-skills:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-strong);
+}

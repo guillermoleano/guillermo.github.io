@@ -1,0 +1,107 @@
+/* =========================================================
+   🟣 HERO (ABOUT SECTION - SENIOR UX/UI IMPROVED)
+========================================================= */
+
+#about {
+    flex: 2; /* keeps layout balance in flex container */
+
+    display: flex; /* enables vertical control */
+    flex-direction: column; /* stacks title + text */
+
+    justify-content: center; /* vertical alignment harmony */
+
+    padding: 1.5rem; /* breathing space inside card */
+
+    gap: 1rem; /* consistent spacing between elements */
+}
+
+/* =========================
+   HERO TITLE
+========================= */
+
+#about h1 {
+
+    /* =========================
+       TYPOGRAPHY FOUNDATION
+    ========================= */
+
+    font-size: clamp(2rem, 3vw, 3.2rem); /* fluid responsive scale */
+    line-height: 1.12; /* tighter editorial feel */
+
+    font-weight: 750; /* slightly more premium than bold */
+
+    letter-spacing: -0.03em; /* modern SaaS typography */
+
+    margin: 0;
+
+    /* =========================
+       CORE COLOR STRATEGY
+    ========================= */
+
+    color: var(--text-primary); /* keep readability FIRST */
+
+    position: relative;
+
+    /* =========================
+       PREMIUM VISUAL DEPTH
+    ========================= */
+
+    text-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(105, 66, 226, 0.15); /* subtle violet ambient glow */
+
+    transition: all 0.3s ease;
+}
+
+/* =========================
+   ACCENT OVERLAY (NOT DOMINANT TEXT)
+========================= */
+
+#about h1::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    /* gradient accent overlay (very subtle, not overpowering) */
+    background: linear-gradient(
+        90deg,
+        rgba(46, 242, 187, 0.25),
+        rgba(105, 66, 226, 0.25)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    pointer-events: none;/*  */
+
+    opacity: 0.6;
+}
+
+/* =========================
+   HERO DESCRIPTION
+========================= */
+
+#about p {
+    max-width: 65ch; /* UX best practice: readable line length */
+
+    font-size: 1rem; /* stable base readability */
+
+    line-height: 1.7; /* improves reading comfort */
+
+    color: var(--text-secondary); /* hierarchy consistency */
+
+    margin: 0; /* avoid stacking inconsistencies */
+}
+
+/* =========================
+   MICRO INTERACTION (OPTIONAL PREMIUM FEEL)
+========================= */
+
+#about:hover h1 {
+    transform: translateY(-2px); /* subtle life */
+    transition: transform 0.3s ease;
+}

@@ -1,0 +1,111 @@
+/* =========================================================
+   🟣 FOOTER (SYSTEM ALIGNED)
+========================================================= */
+
+.footer {
+    padding: 2.5rem 1.5rem; /* consistent spacing system */
+    background: var(--bg-elevated); /* matches your design tokens */
+    border-top: 1px solid var(--border); /* subtle separation */
+}
+
+/* =========================================================
+   📦 FOOTER LAYOUT
+========================================================= */
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* =========================================================
+   🧠 BRAND / COPYRIGHT
+========================================================= */
+
+.footer-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary); /* consistent readability */
+}
+
+/* highlight name (brand identity) */
+.highlight {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* =========================================================
+   🔗 SOCIAL LINKS SYSTEM
+========================================================= */
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* =========================================================
+   🔘 SOCIAL LINK (INTERACTIVE ELEMENT)
+========================================================= */
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.02);
+
+    transition: all 0.25s ease;
+}
+
+/* hover state (matches your button system) */
+.social-link:hover {
+    color: var(--text-primary);
+
+    background: var(--hover-overlay);
+
+    border-color: var(--accent-secondary);
+
+    box-shadow: 0 0 20px var(--glow-mint);
+
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   🖼 ICONS (consistent UI sizing)
+========================================================= */
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+
+    opacity: 0.9;
+}
+
+/* =========================================================
+   📱 RESPONSIVE BEHAVIOR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}

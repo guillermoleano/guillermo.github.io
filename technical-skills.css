@@ -1,0 +1,92 @@
+/* =========================================================
+   🟢 TECHNICAL SKILLS (SENIOR UX/UI DESIGN)
+========================================================= */
+
+#skills {
+    flex: 1; /* keeps layout responsive inside flex system */
+
+    display: flex; /* enables vertical structure control */
+    flex-direction: column; /* stacks title + list */
+
+    gap: 1rem; /* consistent spacing between elements */
+
+    padding: 1.5rem; /* internal breathing space */
+
+    /* clean surface without heavy visual noise */
+
+    /* subtle depth (optional glass feel) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+#skills h2 {
+    font-size: 1.4rem; /* clear hierarchy under hero */
+
+    font-weight: 600; /* strong but not aggressive */
+
+    letter-spacing: -0.01em; /* modern UI refinement */
+
+
+    margin: 0; /* remove default spacing */
+}
+
+/* =========================
+   LIST RESET (CLEAN UI)
+========================= */
+
+#skills ul {
+    list-style: none; /* removes default bullets */
+
+    padding: 0; /* removes browser indentation */
+
+    margin: 0; /* removes extra spacing */
+
+    display: flex; /* modern layout approach */
+    flex-direction: column; /* vertical stack */
+
+    gap: 0.6rem; /* controlled spacing between items */
+}
+
+/* =========================
+   LIST ITEMS (UX IMPROVED READABILITY)
+========================= */
+
+#skills li {
+    font-size: 0.95rem; /* slightly smaller than body for hierarchy */
+
+    line-height: 1.6; /* improves readability */
+
+    color: var(--text-secondary); /* secondary hierarchy */
+
+    padding-left: 0.5rem; /* subtle indentation */
+
+    position: relative; /* enables custom bullet */
+}
+
+/* =========================
+   CUSTOM BULLET (MODERN UI DETAIL)
+========================= */
+
+#skills li::before {
+    content: "•"; /* custom bullet */
+
+    position: absolute;
+    left: 0; /* aligns bullet to left edge */
+
+    color: var(--accent-secondary); /* brand accent highlight */
+
+    font-weight: bold;
+}
+
+#skills li {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#skills li:hover {
+    transform: translateX(4px); /* subtle motion */
+    color: var(--text-primary); /* increases emphasis */
+}

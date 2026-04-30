@@ -1,0 +1,97 @@
+/* =========================================================
+   🟣 PROGRAMMING (SYSTEM EXTENSION ONLY)
+   -> NO rompe main / container / global system
+========================================================= */
+
+/* SECTION ONLY: spacing + structure inheritance */
+#programming {
+
+    /* NO layout overrides (main already controls it) */
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem; /* internal spacing only */
+}
+
+/* =========================
+   TITLE (inherits card system)
+========================= */
+
+#programming h2 {
+
+    font-family: "Rokkitt", serif;
+
+    font-size: 1.4rem; /* matches your container h2 system */
+
+    color: var(--text-primary);
+
+    letter-spacing: -0.02em;
+
+    margin: 0 0 0.5rem 0;
+}
+
+/* =========================
+   LIST SYSTEM (chip layout)
+========================= */
+
+.programming {
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+}
+
+/* =========================
+   ITEM RESET ONLY
+========================= */
+
+.programming li {
+    margin: 0;
+}
+
+/* =========================
+   BUTTONS (GLOBAL FIRST RULE)
+   -> DO NOT override base styles
+========================= */
+
+.programming button {
+
+    /* ONLY layout refinement */
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.85rem; /* minor hierarchy tweak */
+}
+
+/* =========================
+   HOVER (enhancement layer only)
+========================= */
+
+.programming button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-sm);
+
+    border-color: var(--accent-secondary); /* consistent with system */
+}
+
+/* =========================
+   ACTIVE STATE
+========================= */
+
+.programming button:active {
+
+    transform: translateY(0);
+
+    background: var(--hover-overlay);
+}

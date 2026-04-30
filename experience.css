@@ -1,0 +1,151 @@
+/* =========================================================
+   🟣 EXPERIENCE TIMELINE (SENIOR UX/UI SYSTEM)
+========================================================= */
+
+#experience {
+    display: flex; /* layout container */
+    flex-direction: column; /* stack timeline items */
+    gap: 2rem; /* spacing between jobs */
+
+    padding: 1.5rem; /* internal spacing */
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+#experience h2 {
+    font-family: "Rokkitt", serif;
+    font-size: 1.4rem;
+
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+
+    margin: 0;
+}
+
+/* =========================
+   TIMELINE ITEM (CARD)
+========================= */
+
+#experience article {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 1.5rem;
+
+    border-radius: 16px;
+
+    /* glass system (aligned with your UI) */
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+
+    
+
+    box-shadow: var(--shadow-sm);
+
+    transition: all 0.25s ease;
+}
+
+/* hover micro interaction */
+#experience article:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--border-strong);
+
+    box-shadow: var(--shadow-md);
+}
+
+/* =========================
+   ROLE TITLE
+========================= */
+
+#experience h3 {
+    font-size: 1.1rem;
+
+    color: var(--text-primary);
+
+    margin: 0;
+}
+
+/* =========================
+   DATE (SECONDARY HIERARCHY)
+========================= */
+
+#experience article::before {
+    content: attr(data-date); /* optional future improvement */
+
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+
+    font-size: 0.75rem;
+
+    color: var(--text-muted);
+}
+
+/* =========================
+   LIST INSIDE EXPERIENCE
+========================= */
+
+#experience ul {
+    margin-top: 0.5rem;
+
+    padding-left: 1.2rem;
+}
+
+#experience li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* =========================
+   TIMELINE VISUAL LINE (OPTIONAL PREMIUM TOUCH)
+========================= */
+
+#experience {
+    position: relative;
+}
+
+#experience::before {
+    content: "";
+
+    position: absolute;
+    left: 8px;
+    top: 3rem;
+    bottom: 0;
+
+    width: 2px;
+
+    background: linear-gradient(
+        var(--accent-primary),
+        var(--accent-secondary)
+    );
+
+    opacity: 0.3;
+}
+
+/* =========================
+   DOT MARKERS
+========================= */
+
+#experience article::after {
+    content: "";
+
+    position: absolute;
+    left: -4px;
+    top: 1.8rem;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--accent-secondary);
+
+    box-shadow: 0 0 12px var(--accent-secondary);
+}

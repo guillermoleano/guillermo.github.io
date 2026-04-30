@@ -1,0 +1,97 @@
+/* =========================================================
+   🟡 WORKSHOPS SECTION (LEVEL 2 UX/UI)
+========================================================= */
+
+#workshops {
+    display: flex; /* vertical layout */
+    flex-direction: column;
+
+    gap: 1rem; /* spacing system */
+}
+
+/* =========================
+   TITLE (inherits global)
+========================= */
+
+#workshops h2 {
+    margin: 0;
+    padding-top: 19px;
+}
+
+/* =========================
+   LIST SYSTEM (UPGRADED)
+========================= */
+
+#workshops ul {
+    list-style: none; /* remove bullets */
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem; /* spacing between items */
+}
+
+/* =========================
+   ITEM (CARD-LIKE ROW)
+========================= */
+
+#workshops li {
+    position: relative;
+
+    padding: 0.6rem 0.9rem; /* compact spacing */
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.02); /* subtle glass */
+
+    border: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+
+    transition: all 0.25s ease;
+}
+
+/* =========================
+   HOVER (SUBTLE INTERACTION)
+========================= */
+
+#workshops li:hover {
+    color: var(--text-primary); /* improve readability */
+
+    border-color: var(--border-strong); /* slight emphasis */
+
+    background: rgba(255, 255, 255, 0.04); /* soft highlight */
+
+    transform: translateX(4px); /* lateral movement (premium feel) */
+}
+
+/* =========================
+   LEFT ACCENT BAR (PRO TOUCH)
+========================= */
+
+#workshops li::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 3px;
+    height: 60%;
+
+    background: var(--accent-secondary);
+
+    border-radius: 4px;
+
+    transform: translateY(-50%) scaleY(0); /* hidden by default */
+
+    transition: transform 0.25s ease;
+}
+
+/* show accent on hover */
+#workshops li:hover::before {
+    transform: translateY(-50%) scaleY(1);
+}
